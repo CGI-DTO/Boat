@@ -54,7 +54,9 @@ export default {
     this.$refs.appManager.style.height = window.innerHeight + 'px';
     window.onresize =  () => {
       this.$refs.appManager.style.height = window.innerHeight + 'px';
-    }; 
+    };
+    // Start web socket
+    window.DataManager.startWebSocket();
   },
   data (){
     return {

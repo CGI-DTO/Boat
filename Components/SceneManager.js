@@ -108,7 +108,7 @@ class SceneManager{
     // Ocean Buoy
     // this.OceanBuoy = new OceanBuoyEntity(scene);
     // Pati
-    this.Pati = new PatiEntity(scene);
+    this.pati = new PatiEntity(scene);
 
 
     // Flag
@@ -118,8 +118,8 @@ class SceneManager{
     
 
     // Rosa dels vents
-    this.rosaVents = new RosaVentsEntity(scene);
-    this.rosaVents.root.position.y = 7;
+    // this.rosaVents = new RosaVentsEntity(scene);
+    // this.rosaVents.root.position.y = 7;
 
 
     // SCENE TEXT
@@ -400,6 +400,14 @@ class SceneManager{
     // Crawler
     if (this.OceanCrawler){
       this.OceanCrawler.update(dt);
+    }
+
+
+
+
+    // Pati updates
+    if (this.pati){
+      this.pati.update(dt);
     }
 
 

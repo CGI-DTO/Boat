@@ -8,6 +8,11 @@
         <div class="icon-svg infoDiv" @click="infoButtonClicked">info</div>
       </button> -->
 
+      <!-- Web socket availability -->
+      <button class="roundButton" :class="wsStatus == 1 ? 'open' : wsStatus == 0 ? 'connecting': wsStatus > 1 ? 'closed' : 'unknown'">
+        <div class="icon-svg infoDiv" @click="reconnectWebSocket">Websocket</div>
+      </button>
+
       <!-- Language selector -->
       <language-selector></language-selector>
     
@@ -42,6 +47,11 @@ export default {
   name: "TopRightNav",
   created() {
 
+    // Web socket events
+    window.eventBus.on('DataManager_WebSocketStatus', status => {
+      this.wsStatus = status;
+    });
+
   },
   mounted() {
     // Declare events
@@ -55,12 +65,12 @@ export default {
       let angle = Math.atan2(xDir, zDir) * 180 / Math.PI;
       // Rotate compass in the opposite direction
       this.$refs["compass-icon"].style.transform = "rotate(" + angle + "deg)";
-    })
+    });
 
   },
   data() {
     return {
-
+      wsStatus: false,
     }
   },
   methods: {
@@ -72,6 +82,9 @@ export default {
       //window.eventBus.emit('TopRightNav_infoButtonClicked');
       window.eventBus.emit('OpenCentralPanel', 'infoPanel');
       //window.open('https://github.com/BlueNetCat/Ocean', '_blank');
+    },
+    reconnectWebSocket: function(e){
+      window.DataManager.reconnectWebSocket();
     }
   },
   components: {
@@ -132,6 +145,22 @@ export default {
     border-radius: 50%;
   }
 
+  .open {
+    background: green;
+  }
+  .closed {
+    background: red;
+  }
+
+  .connecting {
+    background:  rgb(24, 173, 49);
+    animation: connectingAnim 0.2s infinite linear;
+  }
+  @keyframes connectingAnim {
+    0% {background: rgb(24, 173, 49);}
+    50% {background: rgb(226, 255, 182);}
+    100% {background: rgb(24, 173, 49);}
+  }
 
   .north {
     stroke: #1a1a1a;
@@ -150,4 +179,5 @@ export default {
     stroke-width: 20px;
     fill: #1a1a1a;
   }
+
 </style>

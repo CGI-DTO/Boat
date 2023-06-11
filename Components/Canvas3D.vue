@@ -49,6 +49,23 @@ export default {
     });
 
 
+
+
+    // ***** WEB SOCKET DATA *****
+    window.eventBus.on('DataManager_WebSocketMessage', (msg) => {
+      
+      let msgJS = JSON.parse(msg);
+      let data = msgJS.data.editorContent;
+      if (data.acceleration){
+        // Use the acceleration to determine the orientation of the boat
+        let acc = data.acceleration;
+        // Update orientation
+        if (this.sceneManager.pati){
+          this.sceneManager.pati.setOrientationFromAccelerometer(acc);
+        }
+      }
+    });
+
     // ***** TIME BAR WITH DATA *****
     const updateData = (dataInTimestamp) => {
       // Ocean
