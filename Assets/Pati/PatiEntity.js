@@ -44,14 +44,16 @@ class PatiEntity {
     this.root;
     // First check magnitude
     let mag = Math.sqrt(acc.x*acc.x + acc.y*acc.y + acc.z*acc.z);
-    if (mag > 10.2)
-      return;
+    // if (mag > 10.2)
+    //   return;
     // Normalize values
     let accNorm = new THREE.Vector3(acc.x/mag, acc.y/mag, acc.z/mag);
     // Up vector
     let magCustomUp = Math.sqrt(acc.x*acc.x + acc.z*acc.z);
+    // Side vector
+    let magCustomSide = Math.sqrt(acc.y*acc.y + acc.z*acc.z);
     // TODO MEMORY LEAK
-    let mx = new THREE.Matrix4().lookAt(new THREE.Vector3(0, -accNorm.y, accNorm.z),new THREE.Vector3(0,0,0),new THREE.Vector3(-acc.x/magCustomUp, acc.z/magCustomUp, 0));
+    let mx = new THREE.Matrix4().lookAt(new THREE.Vector3(0, -acc.y / magCustomSide, acc.z / magCustomSide),new THREE.Vector3(0,0,0),new THREE.Vector3(-acc.x/magCustomUp, acc.z/magCustomUp, 0));
     let qt = new THREE.Quaternion().setFromRotationMatrix(mx);
     // Copy quaternions
     this.nextQt.set(qt.x, qt.y, qt.z, qt.w);
