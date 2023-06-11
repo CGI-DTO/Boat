@@ -1,21 +1,4 @@
-# Ocean Data
-Link to the [3D simulation of the sea using Ocean data](https://cgi-dto.github.io/Ocean/).
+# Digital Twin + Phone App
+The boat's orientation changes according to the sensors on the phone. The idea is to have the phone in the boat with the app. The app sends data to a server (node.js) which then sends it to this web client. "Espectators" in this website can see how the boat is moving on the sea.
 
-The underwater observatory collects data in real-time. It has been collecting data since around 2000. 
-## Similar projects and observatories
-- Marine Institute: http://smartbay.marine.ie/
-
-- Canada ocean networks:
-https://oceannetworks.ca/science
-https://data.oceannetworks.ca/home?TREETYPE=1&LOCATION=1052&DEVICECATEGORY=20&SENSORCODE=380&TIMECONFIG=3
-
-
-- EMSO
-http://emso.eu/data/
-http://emso.eu/observatories/#map
-
-https://data.emso.eu/home
-https://data.emso.eu/general_dashboard
-
-- EMODNET
-https://www.emodnet-physics.eu/map/DefaultMap.aspx?sessionid=636662147564970891
+The app is developed with react-native. The transmition of data is done through websockets.
