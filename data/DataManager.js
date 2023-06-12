@@ -25,7 +25,9 @@ class DataManager{
   // PUBLIC METHODS
   startWebSocket = function(){
     // Web socket
-    window.AppSocket = new WebSocket('ws://127.0.0.1:8000');
+    //window.AppSocket = new WebSocket('ws://127.0.0.1:8000');
+    window.AppSocket = new WebSocket('ws://digitaltwinocean.live');
+
     let ws = window.AppSocket;
     window.eventBus.emit('DataManager_WebSocketStatus', WebSocket.CONNECTING);
     // Web socket events
@@ -39,6 +41,7 @@ class DataManager{
       window.eventBus.emit('DataManager_WebSocketStatus', ws.readyState);
     };
     ws.onmessage = function(event) {
+      console.log(event.data);
       let msg = event.data;
       window.eventBus.emit('DataManager_WebSocketMessage', msg);
     };
