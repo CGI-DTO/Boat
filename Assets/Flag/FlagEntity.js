@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'https://threejs.org/examples/jsm/loaders/GLTFLoader.js';
-import { FlagBehavior } from '/Ocean/Assets/Flag/FlagBehavior.js'
+import { FlagBehavior } from '/Boat/Assets/Flag/FlagBehavior.js'
 
 class FlagEntity {
   
@@ -19,7 +19,7 @@ class FlagEntity {
 
     const gltfLoader = new GLTFLoader();
     // objLoader.load('https://threejs.org/manual/examples/resources/models/windmill/windmill.obj', (root) => {
-    gltfLoader.load('/Ocean/Assets/Flag/flag.glb', (gltf) => {
+    gltfLoader.load('/Boat/Assets/Flag/flag.glb', (gltf) => {
       // GLTF scene
       this.root = gltf.scene;
       this.flagObj = this.root.getObjectByName("Armature");//this.root.children[0];
@@ -96,7 +96,7 @@ class FlagEntity {
     if (this.beaufortTextures[scale] == undefined){
       // Load texture
       const loader = new THREE.TextureLoader();
-      texture = loader.load('/Ocean/Assets/Flag/BeaufortScale/'+ scale +'.png');
+      texture = loader.load('/Boat/Assets/Flag/BeaufortScale/'+ scale +'.png');
       texture.encoding = THREE.sRGBEncoding;
       texture.magFilter = THREE.LinearFilter; //THREE.NearestFilter;
       texture.flipY = false;

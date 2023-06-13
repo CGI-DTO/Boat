@@ -86,9 +86,9 @@
 
 
 <script>
-import DataStreamsBar from '/Ocean/Components/Bottom/DataStreamsBar.vue';
+import DataStreamsBar from '/Boat/Components/Bottom/DataStreamsBar.vue';
 // Import components
-import RangeSlider from '/Ocean/Components/Bottom/RangeSlider.vue'
+import RangeSlider from '/Boat/Components/Bottom/RangeSlider.vue'
 
 export default {
     name: "time-range-bar",

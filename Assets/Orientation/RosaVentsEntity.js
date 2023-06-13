@@ -7,7 +7,7 @@ class RosaVentsEntity {
 
     const loader = new THREE.TextureLoader();
     // const texture = loader.load('https://threejs.org/manual/examples/resources/images/checker.png');
-    const texture = loader.load('/Ocean/Assets/Orientation/NESW.png');
+    const texture = loader.load('/Boat/Assets/Orientation/NESW.png');
     texture.encoding = THREE.sRGBEncoding;
     //texture.wrapS = THREE.RepeatWrapping;
     //texture.wrapT = THREE.RepeatWrapping;

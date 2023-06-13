@@ -5,7 +5,7 @@ class SkyboxEntity {
 
   constructor(scene){
     const gltfLoader = new GLTFLoader();
-    gltfLoader.load('/Ocean/Assets/Skybox/skybox.glb', (gltf) => { // '../Assets/Skybox/skybox.glb'
+    gltfLoader.load('/Boat/Assets/Skybox/skybox.glb', (gltf) => { // '../Assets/Skybox/skybox.glb'
       // GLTF scene
       const root = gltf.scene;
       // Scale

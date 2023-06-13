@@ -1,4 +1,4 @@
-import preLoadedDataTypes from "/Ocean/data/WMSDataTypes.js";
+import preLoadedDataTypes from "/Boat/data/WMSDataTypes.js";
 
 // Scripts that obtain data from the CMEMS WMS API
 export default class WMSDataRetriever{

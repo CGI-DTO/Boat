@@ -35,7 +35,7 @@ class TextMeshEntity {
   loadFont = function(callback){
     const fontLoader = new FontLoader();
     //fontLoader.load('https://threejs.org/examples/fonts/helvetiker_bold.typeface.json', (font) => {
-    fontLoader.load('/Ocean/Assets/TextMesh/Helvetica 65 Medium_Regular.json', (font) => { 
+    fontLoader.load('/Boat/Assets/TextMesh/Helvetica 65 Medium_Regular.json', (font) => { 
       this.font = font;
       callback();
     });

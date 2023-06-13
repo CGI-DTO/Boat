@@ -57,7 +57,7 @@
 
 
 <script>
-import Knob from "/Ocean/Components/Knob.vue";
+import Knob from "/Boat/Components/Knob.vue";
 
 
 

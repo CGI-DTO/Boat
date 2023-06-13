@@ -40,7 +40,7 @@
 
 
 <script>
-import LanguageSelector from '/Ocean/Components/TopRight/LanguageSelector.vue'
+import LanguageSelector from '/Boat/Components/TopRight/LanguageSelector.vue'
 
 
 export default {

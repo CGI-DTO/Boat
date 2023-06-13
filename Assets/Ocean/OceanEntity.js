@@ -1,8 +1,8 @@
 import * as THREE from 'three';
 import { Vector3 } from 'three';
 import { GLTFLoader } from 'https://threejs.org/examples/jsm/loaders/GLTFLoader.js';
-import {OceanVertShader, OceanFragShader} from '/Ocean/Assets/Ocean/OceanShader.js';
-import { OceanParameters } from '/Ocean/Assets/Ocean/OceanParams.js';
+import {OceanVertShader, OceanFragShader} from '/Boat/Assets/Ocean/OceanShader.js';
+import { OceanParameters } from '/Boat/Assets/Ocean/OceanParams.js';
 
 class OceanEntity {
 
@@ -51,7 +51,7 @@ class OceanEntity {
     paramsTexture.needsUpdate = true;
 
     // Load normal texture for smaller waves that the geometry cannot capture
-    // let normalTexture = new THREE.TextureLoader().load('/Ocean/Assets/Terrain/OceanNormal.png');
+    // let normalTexture = new THREE.TextureLoader().load('/Boat/Assets/Terrain/OceanNormal.png');
     // normalTexture.wrapS = normalTexture.wrapT = THREE.RepeatWrapping;
 
     // Create video texture
@@ -60,7 +60,7 @@ class OceanEntity {
     // https://github.com/mrdoob/three.js/blob/master/examples/webgl_materials_video.html
     let videoEl = document.createElement("video");
     videoEl.loop = true; videoEl.crossOrigin = 'anonymous'; videoEl.playsInline = true; videoEl.muted = "muted";
-    videoEl.src = '/Ocean/Assets/Terrain/OceanNormal.mp4';
+    videoEl.src = '/Boat/Assets/Terrain/OceanNormal.mp4';
     videoEl.play();
     let normalTexture = new THREE.VideoTexture(videoEl);
     normalTexture.wrapS = normalTexture.wrapT = THREE.RepeatWrapping;
@@ -79,7 +79,7 @@ class OceanEntity {
     // Load ocean mesh
     let gltfLoader = new GLTFLoader();
 
-    gltfLoader.load('/Ocean/Assets/Terrain/OceanSurfaceLR.glb', (gltf) => {
+    gltfLoader.load('/Boat/Assets/Terrain/OceanSurfaceLR.glb', (gltf) => {
 
       // Define material and shaders
       let oceanMaterial = new THREE.ShaderMaterial({
@@ -128,7 +128,7 @@ class OceanEntity {
 
       // LEVEL OF DETAIL INCREASE WHEN HIGHER RESOLUTIONS ARE LOADED
       // Load next resolution and add
-      gltfLoader.load('/Ocean/Assets/Terrain/OceanSurfaceMR.glb', (gltf) => {
+      gltfLoader.load('/Boat/Assets/Terrain/OceanSurfaceMR.glb', (gltf) => {
         // Store the version
         this.oceanLOD.MR = gltf.scene.children[0];
         this.oceanTile = gltf.scene.children[0];
@@ -140,7 +140,7 @@ class OceanEntity {
         scene.add(gltf.scene);
         let midResScene = gltf.scene;
         // Load next resolution and add
-        gltfLoader.load('/Ocean/Assets/Terrain/OceanSurfaceHR.glb', (gltf) => {
+        gltfLoader.load('/Boat/Assets/Terrain/OceanSurfaceHR.glb', (gltf) => {
           this.oceanLOD.HR = gltf.scene.children[0];
           this.oceanTile = gltf.scene.children[0];
           this.oceanTile.material = oceanMaterial;

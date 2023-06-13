@@ -21,7 +21,7 @@
 
 
     <!-- Ocean Title -->
-    <img class="OceanBanner" src="/Ocean/Assets/Banner.png">
+    <img class="OceanBanner" src="/Boat/Assets/Banner.png">
   </div>
 </template>
 
@@ -38,10 +38,10 @@
 */
 
 // Import components
-import Canvas3D from "/Ocean/Components/Canvas3D.vue"
-import InstrumentsMenu from "/Ocean/Components/Instruments/InstrumentsMenu.vue"
-import TopRightNav from "/Ocean/Components/TopRight/TopRightNav.vue"
-import CentralPanel from "/Ocean/Components/CentralPanel.vue"
+import Canvas3D from "/Boat/Components/Canvas3D.vue"
+import InstrumentsMenu from "/Boat/Components/Instruments/InstrumentsMenu.vue"
+import TopRightNav from "/Boat/Components/TopRight/TopRightNav.vue"
+import CentralPanel from "/Boat/Components/CentralPanel.vue"
 
 export default {
   name: "AppManager",

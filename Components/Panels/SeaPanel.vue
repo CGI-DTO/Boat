@@ -136,7 +136,7 @@
 
 
 <script>
-import Knob from '/Ocean/Components/Knob.vue';
+import Knob from '/Boat/Components/Knob.vue';
 
 // TODO: Wave height tip: http://jsfiddle.net/Zu59F/
 

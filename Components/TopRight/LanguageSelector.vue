@@ -13,9 +13,9 @@
           <ellipse class="cls-2" cx="255" cy="256" rx="72" ry="218" />
         </svg> -->
 
-        <img class="lang-icon" src="/Ocean/lang/en-200.png" v-show="$i18n.locale.includes('en')">
-        <img class="lang-icon" src="/Ocean/lang/es-200.png" v-show="$i18n.locale.includes('es')">
-        <img class="lang-icon" src="/Ocean/lang/ca-200.png" v-show="$i18n.locale.includes('ca')">
+        <img class="lang-icon" src="/Boat/lang/en-200.png" v-show="$i18n.locale.includes('en')">
+        <img class="lang-icon" src="/Boat/lang/es-200.png" v-show="$i18n.locale.includes('es')">
+        <img class="lang-icon" src="/Boat/lang/ca-200.png" v-show="$i18n.locale.includes('ca')">
       
       </button>
     </div>

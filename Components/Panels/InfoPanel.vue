@@ -25,7 +25,7 @@
       <h4>{{$t('infoPanel.funding')}}</h4>
       <p>{{$t('infoPanel.p4')}}</p>
       <!-- Funding image -->
-      <img src="/Ocean/img/Logos.png" style="max-width: 100%">
+      <img src="/Boat/img/Logos.png" style="max-width: 100%">
     </div>
   </div>
 </template>

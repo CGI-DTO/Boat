@@ -24,9 +24,9 @@
 
 
 <script>
-import InfoPanel from '/Ocean/Components//Panels/InfoPanel.vue';
-import SeaPanel from "/Ocean/Components/Panels/SeaPanel.vue"
-import WindPanel from "/Ocean/Components/Panels/WindPanel.vue"
+import InfoPanel from '/Boat/Components//Panels/InfoPanel.vue';
+import SeaPanel from "/Boat/Components/Panels/SeaPanel.vue"
+import WindPanel from "/Boat/Components/Panels/WindPanel.vue"
 
 export default {
   name: "CentralPanel",

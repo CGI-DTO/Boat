@@ -79,9 +79,9 @@
 
 
 <script>
-import DataTicker from '/Ocean/Components/Bottom/DataTicker.vue';
-import CameraYoutube from "/Ocean/Components/Bottom/CameraYoutube.vue"
-import TimeRangeBar from "/Ocean/Components/Bottom/TimeRangeBar.vue"
+import DataTicker from '/Boat/Components/Bottom/DataTicker.vue';
+import CameraYoutube from "/Boat/Components/Bottom/CameraYoutube.vue"
+import TimeRangeBar from "/Boat/Components/Bottom/TimeRangeBar.vue"
 
 export default {
   name:"BottomSection",

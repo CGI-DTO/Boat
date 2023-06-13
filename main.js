@@ -1,14 +1,14 @@
 // https://github.com/FranckFreiburger/vue3-sfc-loader
 // https://github.com/FranckFreiburger/vue3-sfc-loader/blob/main/docs/examples.md#use-sfc-custom-blocks-for-i18n
-import ca from '/Ocean/lang/ca.js';
-import en from '/Ocean/lang/en.js';
-import es from '/Ocean/lang/es.js';
+import ca from '/Boat/lang/ca.js';
+import en from '/Boat/lang/en.js';
+import es from '/Boat/lang/es.js';
 // Load classes
 // SceneManager
-import SceneManager from "/Ocean/Components/SceneManager.js"
+import SceneManager from "/Boat/Components/SceneManager.js"
 window.SceneManager = SceneManager;
 // DataManager
-import DataManager from "/Ocean/data/DataManager.js"
+import DataManager from "/Boat/data/DataManager.js"
 window.DataManager = DataManager;
 
 // Declare translations
@@ -54,7 +54,7 @@ const { loadModule } = window['vue3-sfc-loader'];
 
 const app = Vue.createApp({
   components: {
-    'app-manager': Vue.defineAsyncComponent(() => loadModule('/Ocean/Components/AppManager.vue', options)),
+    'app-manager': Vue.defineAsyncComponent(() => loadModule('/Boat/Components/AppManager.vue', options)),
   },
   template: '<app-manager></app-manager>'
 });

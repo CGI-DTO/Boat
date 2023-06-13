@@ -4,16 +4,16 @@ import { OrbitControls } from 'https://threejs.org/examples/jsm/controls/OrbitCo
 import { OBJLoader } from 'https://threejs.org/examples/jsm/loaders/OBJLoader.js';
 import { GLTFLoader } from 'https://threejs.org/examples/jsm/loaders/GLTFLoader.js';
 import { FBXLoader } from 'https://threejs.org/examples/jsm/loaders/FBXLoader.js'
-import { RosaVentsEntity } from '/Ocean/Assets/Orientation/RosaVentsEntity.js';
-import { SkyboxEntity } from '/Ocean/Assets/Skybox/SkyboxEntity.js';
+import { RosaVentsEntity } from '/Boat/Assets/Orientation/RosaVentsEntity.js';
+import { SkyboxEntity } from '/Boat/Assets/Skybox/SkyboxEntity.js';
 
-import * as FogShader from '/Ocean/Assets/Terrain/FogShader.js'
-import { OceanEntity } from '/Ocean/Assets/Ocean/OceanEntity.js';
-import { OceanBuoyEntity } from '/Ocean/Assets/OBSEABuoy/OBSEABuoyEntity.js';
-import { PatiEntity } from '/Ocean/Assets/Pati/PatiEntity.js';
-//import { WindsockEntity } from '/Ocean/Assets/Windsock/WindsockEntity.js';
-import { FlagEntity } from '/Ocean/Assets/Flag/FlagEntity.js';
-import { TextMeshEntity } from '/Ocean/Assets/TextMesh/TextMeshEntity.js';
+import * as FogShader from '/Boat/Assets/Terrain/FogShader.js'
+import { OceanEntity } from '/Boat/Assets/Ocean/OceanEntity.js';
+import { OceanBuoyEntity } from '/Boat/Assets/OBSEABuoy/OBSEABuoyEntity.js';
+import { PatiEntity } from '/Boat/Assets/Pati/PatiEntity.js';
+//import { WindsockEntity } from '/Boat/Assets/Windsock/WindsockEntity.js';
+import { FlagEntity } from '/Boat/Assets/Flag/FlagEntity.js';
+import { TextMeshEntity } from '/Boat/Assets/TextMesh/TextMeshEntity.js';
 
 
 
@@ -194,7 +194,7 @@ class SceneManager{
 
     // Create image logo
     let expOceanImg = document.createElement("img");
-    expOceanImg.src = "/Ocean/Assets/Banner.png";
+    expOceanImg.src = "/Boat/Assets/Banner.png";
     expOceanImg.style['max-width'] = '40vw';
     expOceanImg.style['max-height'] = '130px';//'18%';
 
@@ -218,7 +218,7 @@ class SceneManager{
 
     // Create sponsors logos
     let sponsorsImg = document.createElement("img");
-    sponsorsImg.src = "/Ocean/img/Logos.png";
+    sponsorsImg.src = "/Boat/img/Logos.png";
     sponsorsImg.style['max-width'] = '100%';
     sponsorsImg.style['max-height'] = '20%';
     sponsorsImg.style.bottom = '10px';

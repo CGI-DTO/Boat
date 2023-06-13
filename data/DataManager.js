@@ -1,4 +1,4 @@
-import WMSDataRetriever from "/Ocean/data/WMSDataRetriever.js";
+import WMSDataRetriever from "/Boat/data/WMSDataRetriever.js";
 
 // Manages where to get the data from (API, WMS, or static files)
 class DataManager{

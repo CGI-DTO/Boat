@@ -8,7 +8,7 @@ class PatiEntity {
   constructor(scene){
     // https://www.youtube.com/watch?v=6LA8vEB47Nk&ab_channel=DirkTeucher
     const gltfLoader = new GLTFLoader();
-    gltfLoader.load('/Ocean/Assets/Pati/Pati.glb', (gltf) => {
+    gltfLoader.load('/Boat/Assets/Pati/Pati.glb', (gltf) => {
       // GLTF scene
       const root = gltf.scene;
       // Fix frustrum culling
